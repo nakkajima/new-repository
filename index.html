@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Birdwatching</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+	<header id="idHeader">
+	<h1>{{message}}</h1>
+	</header>
+
+	<div id="idArticle">{{ message }}</div>
+
+      <footer id="idFooter">
+        <h2>{{message}}</h2>
+      </footer>
+
+
+<script src="https://unpkg.com/vue@next"></script>
+
+<script>
+const appHeader = {
+  data() {
+    return {
+      message: 'Vue.createApp(Hello Vue! V3'
+    }
+  }
+}
+
+
+const appArticle = {
+  data() {
+    return {
+      message: 'Hello Vue!'
+    }
+  }
+}
+
+const appFooter = {
+  data() {
+    return {
+      message: 'This is footing.!'
+    }
+  }
+}
+</script>
+
+<script>
+Vue.createApp(appHeader).mount('#idHeader')
+Vue.createApp(appArticle).mount('#idArticle')
+Vue.createApp(appFooter).mount('#idFooter')
+</script>
+</body>
+</html>

@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<!-- html lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Birdwatching</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
+    <title>vue3 Hello Vue!</title>
   </head>
 
   <body>
 
-	<header id="idHeader">
+	<header id="headerId">
 	<h1>{{message}}</h1>
 	</header>
 
-	<div id="idArticle">{{ message }}</div>
+	<div id="articleId">{{ message }}</div>
 
-      <footer id="idFooter">
+      <footer id="footerId">
         <h2>{{message}}</h2>
       </footer>
 
@@ -27,36 +23,34 @@
 <script src="https://unpkg.com/vue@next"></script>
 
 <script>
-const appHeader = {
+const headerApp = {
   data() {
     return {
-      message: 'Vue.createApp(Hello Vue! V3'
+      message: "Vue.createApp(Hello Vue! V3)"
     }
   }
 }
 
 
-const appArticle = {
+const articleApp = {
   data() {
     return {
-      message: 'Hello Vue!'
+      message: "Hello Vue!"
     }
   }
 }
 
-const appFooter = {
+const footerApp = {
   data() {
     return {
-      message: 'This is footing.!'
+      message: "This is footing.!"
     }
   }
 }
-</script>
 
-<script>
-Vue.createApp(appHeader).mount('#idHeader')
-Vue.createApp(appArticle).mount('#idArticle')
-Vue.createApp(appFooter).mount('#idFooter')
+Vue.createApp(headerApp).mount("#headerId")
+Vue.createApp(articleApp).mount("#articleId")
+Vue.createApp(footerApp).mount("#footerId")
 </script>
 </body>
-</html-->
+</html>
